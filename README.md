@@ -1,4 +1,4 @@
-log_analysis
+Log Analysis
 ============
 
 Analysis of my logs
