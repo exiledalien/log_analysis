@@ -11,41 +11,9 @@
   <link href="css/cerulean/bootstrap.min.css" rel="stylesheet">
   <link href="css/custom.css" rel="stylesheet">
 
-  <script language="JavaScript" type="text/javascript">
-  var template, source;
-
-
-
-  function getEvents() {
-    $('#spanStatus').text('Starting AJAX Call');
-    $.ajax({
-      crossDomain: true,
-      type:"GET",
-      contentType: "application/json; charset=utf-8",
-      url: "http://py-eventlogger-ml3.appspot.com/mine3/default/eventList",
-      dataType: "json",
-      success: fillData,
-      error: errorInfo
-    });
-  }
-
-  function errorInfo(er) {
-    $('#spanStatus').text('Error')
-  }
-
-  function fillData(data) {
-    $('#spanStatus').text('Recieved Data');
-    var iterator = 0;
-
-    for(iterator = 0; iterator < data.data.length; iterator++) {
-        //$('#data').append(data.data[iterator].eventType + '<br />')
-        $('#eventsList').append(template(data.data[iterator]));
-      }
-      $('#spanStatus').text('Finshed call').delay(3000).fadeOut(1000);
-    }
-    </script>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <script language="JavaScript" type="text/javascript" src="js/custom.js"></script>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
